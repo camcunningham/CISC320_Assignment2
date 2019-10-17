@@ -1,2 +1,2 @@
-# CISC320_Assignment2
+# Fraction
 Implementation of a Fraction Class in C++.
