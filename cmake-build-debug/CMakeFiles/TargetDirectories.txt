@@ -1,0 +1,3 @@
+C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/cmake-build-debug/CMakeFiles/CISC320_Assignment2_GoodCopy.dir
+C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/cmake-build-debug/CMakeFiles/edit_cache.dir
