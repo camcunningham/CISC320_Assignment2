@@ -9,9 +9,13 @@ FractionException::FractionException(const string &message) : errorMessage(messa
 const string& FractionException::what() { return errorMessage; }
 
 Fraction::Fraction() : num(0), denom(1) {}
-Fraction::Fraction(int num1) : num(1), denom(1) {}
+Fraction::Fraction(int num1) : num(num1), denom(1) {}
 Fraction::Fraction(int num1, int num2) {
     if(num2 != 0) {
+        if(num2 < 0 && num1 > 0) {
+            num1 = -num1;
+            num2 = -num2;
+        }
         int div = gcd(num1, num2);
         num = num1 / div;
         denom = num2 / div;
@@ -29,6 +33,8 @@ int Fraction::denominator() const {
 }
 
 int Fraction::gcd(int n, int m) {
+    n = abs(n);
+    m = abs(m);
     if(m <= n && n % m == 0) {
         return m;
     } else if (n < m) {
@@ -93,6 +99,7 @@ bool operator==(const Fraction& left, const Fraction& right) {
     return result;
 }
 
+//Member overloaded
 ostream& operator<<(ostream& out, const Fraction& value) {
     out << value.num << "/" << value.denom;
     return out;
@@ -104,4 +111,24 @@ istream& operator>>(istream& in, Fraction& value) {
     cout << "Enter the denominator: ";
     in >> value.denom;
     return in;
+}
+
+
+Fraction Fraction::operator-() {
+    return Fraction(-(this->num), this->denom);
+}
+
+Fraction& Fraction::operator++() {
+//    int numerator = (left.numerator() * right.denominator()) + (right.numerator() * left.denominator());
+//    int denominator = (left.denominator() * right.denominator());
+    this->num = num + denom;
+    this->denom = denom;
+
+    return *this;
+}
+
+Fraction Fraction::operator++(int unused) {
+    Fraction temp = *this;
+    ++*this;
+    return temp;
 }

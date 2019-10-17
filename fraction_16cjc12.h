@@ -4,6 +4,7 @@
 #pragma once
 
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 class Fraction {
@@ -27,6 +28,12 @@ public:
 
 friend ostream& operator<<(ostream& out, const Fraction& value);
 friend istream& operator>>(istream& in, Fraction& value);
+
+Fraction operator-();
+//Pre
+Fraction& operator++();
+//Post
+Fraction operator++(int unused);
 
 };
 
