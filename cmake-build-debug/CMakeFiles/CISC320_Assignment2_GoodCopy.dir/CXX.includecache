@@ -6,10 +6,20 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/fraction_16cjc12.cpp
+fraction_16cjc12.h
+C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/fraction_16cjc12.h
+
 C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/fraction_16cjc12.h
 iostream
 -
-stdlib.h
+cstdlib
+-
+sstream
+-
+vector
+-
+iterator
 -
 
 C:/Users/Cam/CLionProjects/CISC320_Assignment2_GoodCopy/main.cpp

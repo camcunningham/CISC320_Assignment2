@@ -57,37 +57,38 @@ int main() {
     test16 += test3;
     cout << "Should be \"73/24\": " << test16 << endl;
 //
-//    // Test comparisons
-//    cout << "\nShould see six comparison test results:" << endl;
-//    Fraction test17(9, 8);
-//    if (test6 == test17)
-//        cout << "Equality test passed." << endl;
-//    if (test6 != test7)
-//        cout << "Inequality test passed." << endl;
-//    if (test6 > test7 && test6 >= test7)
-//        cout << "Greater than test passed." << endl;
-//    if (test7 < test6 && test7 <= test6)
-//        cout << "Less than test passed." << endl;
-//    if (test6 > 1)
-//        cout << "Mixed type comparison passed." << endl;
-//    if (1 < test6)
-//        cout << "Second mixed type comparison passed." << endl;
-//
-//    // Test input, exception and +=:
-//    Fraction sum(0);
-//    Fraction fin;
-//    cout << "\nSumming fractions. Enter fractions as \"1/2\" or just enter a single integer." << endl;
-//    cout << "Enter zero to end the summation:" << endl;
-//    do {
-//        cout << "Enter a fraction to add to sum: ";
-//        try {
-//            cin >> fin;
-//            sum += fin;
-//        } catch (FractionException &e) {
-//            cout << e.what() << endl;
-//        }
-//    } while (fin != 0);
-//    cout << "Sum is: " << sum << endl;
+    // Test comparisons
+    cout << "\nShould see six comparison test results:" << endl;
+    Fraction test17(9, 8);
+    if (test6 == test17)
+        cout << "Equality test passed." << endl;
+    if (test6 != test7)
+        cout << "Inequality test passed." << endl;
+    if (test6 > test7 && test6 >= test7)
+        cout << "Greater than test passed." << endl;
+    if (test7 < test6 && test7 <= test6)
+        cout << "Less than test passed." << endl;
+    if (test6 > 1)
+        cout << "Mixed type comparison passed." << endl;
+    if (1 < test6)
+        cout << "Second mixed type comparison passed." << endl;
+
+    // Test input, exception and +=:
+    Fraction sum(0);
+    Fraction fin;
+    cout << "\nSumming fractions. Enter fractions as \"1/2\" or just enter a single integer." << endl;
+    cout << "Enter zero to end the summation:" << endl;
+    do {
+        cout << "Enter a fraction to add to sum: ";
+        try {
+            cin >> fin;
+            sum += fin;
+        } catch (FractionException &e) {
+            cout << e.what() << endl;
+        }
+    } while (fin != 0);
+    cout << "Sum is: " << sum << endl;
+
 
     return 0;
 
